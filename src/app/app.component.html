@@ -1,0 +1,32 @@
+
+<p>
+SINGLE SELCTION
+</p>
+<!-- UNCOMMENT THIS FOR SINGLE SELECTION -->
+<div class="container row">
+<div  class="col-md-3 col-lg-4 col-xl-4 col-sm-1" *ngFor="let item of art; let i=index" (click)="higlightRow(i)">
+  <div class="card text-black bg-light" [ngClass]="{'card text-black bg-dark': i==selctedIndex}" style="max-width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{item.prop}}</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<p>Multi selection</p>
+<div class="container row">
+  <div class="col-md-2 col-lg-3 col-xl-4 col-sm-1 col-xs-1" *ngFor="let item of art; let i=index">
+  <div class="selection-wrapper">
+    <label for="selected-item-{{i}}" class="selected-label">
+      <input type="checkbox" (change)="setSelected($event ,i)"  name="selected-item" id="selected-item-{{i}}">
+      <span class="icon"></span>
+      <div class="selected-content">
+        <img src="https://image.freepik.com/free-vector/group-friends-giving-high-five_23-2148363170.jpg" alt="">
+        <h4>BED NAME</h4>{{item.prop}}
+        <h5>BED Price</h5>{{item.cost}}
+      </div>
+    </label>
+  </div>
+  </div>
+</div>
