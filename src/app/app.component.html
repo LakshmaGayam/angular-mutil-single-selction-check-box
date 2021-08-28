@@ -3,8 +3,8 @@
 </p>
 <!-- UNCOMMENT THIS FOR SINGLE SELECTION -->
 <div class="container row">
-  <div class="col-md-3 col-lg-4 col-xl-4 col-sm-1" style="with:100%" *ngFor="let item of art; let i=index"
-    (click)="higlightRow(i)">
+  <div class="col-md-3 col-lg-4 col-xl-4 col-sm-1" style="with:100%; cursor:pointer" *ngFor="let item of art; let i=index"
+    (click)="higlightRow(i)" title="{{item.prop}}  click here to hilight">
     <div class="card text-black bg-light" [ngClass]="{'card text-black bg-dark': i==selctedIndex}">
       <div class="card-body">
         <h5 class="card-title">{{item.prop}}</h5>
